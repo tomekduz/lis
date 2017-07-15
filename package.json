@@ -1,0 +1,44 @@
+{
+  "name": "order-by-remove",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "jest",
+    "lint": "tslint --config tslint.json",
+    "build": "npm install && typings install && npm run tsc",
+    "start": "npm run tsc && node dist/index.js"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "collectCoverageFrom": [
+      "**/src/**/*.{ts}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "(.*)Interface.ts",
+      "(.*)Factory.ts",
+      "index.ts"
+    ],
+    "collectCoverage": true,
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "**/test/**/*.test.ts"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.2",
+    "@types/node": "^8.0.9",
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.7",
+    "typescript": "^2.4.1"
+  },
+  "author": "Tomasz Duziak",
+  "license": "ISC"
+}
