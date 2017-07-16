@@ -1,0 +1,17 @@
+{
+  "rules": {
+    "class-name": true,
+    "eofline": true,
+    "indent": [
+      true,
+      "spaces"
+    ],
+    "max-line-length": [
+      true,
+      120
+    ],
+    "no-console": [true, "log"],
+    "no-eval": true,
+    "trailing-comma": true
+  }
+}

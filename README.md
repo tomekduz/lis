@@ -1,20 +1,20 @@
 # Find subsequence
 
-##Requirements
+Find subsequence service allows find subsequence from given number list.
+Service have strategy to find longest increasing subsequence.
+
+
+## Requirements
 Nose.js v6.10.0
 
-##Run application
+## Run application
 ```bash
 npm run build
 npm run start
 ```
 
-##Run test
+## Run test
 ```bash
 npm run build
 npm run test
 ```
-##Available strategy:
-
-Longest Increasing Subsequence
-

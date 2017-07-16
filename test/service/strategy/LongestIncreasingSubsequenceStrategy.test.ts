@@ -18,6 +18,11 @@ describe('#find longest increasing sub sequence using LongestIncreasingSubsequen
         -106,-105,-104, -100,-1,1000,2000,3000,4000,
         5000,6000,12,7000];
 
+    const oneElementSequence: number[] = [1];
+
+    const sequenceOneNumber: number[] = [2, 2, 2, 2, 2, 2, 2];
+
+    const twoNumberSequenceWithMaxLong: number[] = [2, 9223372036854775807];
 
     const longestIncreasingSubsequence = new LongestIncreasingSubsequenceStrategy();
 
@@ -40,6 +45,27 @@ describe('#find longest increasing sub sequence using LongestIncreasingSubsequen
         expect(longestIncreasingSubsequence
             .find(longBeginSequence))
             .toEqual([-5, -4, -3, 1, 3, 7, 10, 12, 16]);
+    });
+
+    it('should return single element sequence, ' +
+        'if I use single element list', () => {
+        expect(longestIncreasingSubsequence
+            .find(oneElementSequence))
+            .toEqual([1]);
+    });
+
+    it('should return single element sequence, ' +
+        'if I use sequence with one number', () => {
+        expect(longestIncreasingSubsequence
+            .find(sequenceOneNumber))
+            .toEqual([2]);
+    });
+
+    it('should return two element sequence, ' +
+        'if I use sequence with max long value', () => {
+        expect(longestIncreasingSubsequence
+            .find(twoNumberSequenceWithMaxLong))
+            .toEqual([2, 9223372036854775807]);
     });
 
     it('should return longest increasing subsequence, ' +
